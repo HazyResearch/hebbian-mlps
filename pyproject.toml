@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hebbian-mlps"
+version = "0.1.0"
+description = "Code and paper reproductions for MLPs Are Hebbians"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "torch>=2.1.0,<3.0.0",
+    "numpy>=1.24.0,<2.0.0",
+    "pandas>=2.0.0,<3.0.0",
+    "matplotlib>=3.7.0,<4.0.0",
+    "scipy>=1.10.0,<2.0.0",
+    "tqdm>=4.65.0,<5.0.0",
+    "transformers>=4.40.0,<5.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/HazyResearch/hebbian-mlps"
+
+[project.optional-dependencies]
+llm = [
+    "datasets>=2.19.0,<4.0.0",
+    "accelerate>=0.28.0,<2.0.0",
+    "safetensors>=0.4.0,<1.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"hebbian.data.language" = ["book_authors.csv"]

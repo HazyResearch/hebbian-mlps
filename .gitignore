@@ -1,0 +1,43 @@
+# Python caches and build outputs
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Experiment outputs and checkpoints
+artifacts/
+checkpoints/
+outputs/
+runs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+
+# Logs and transient files
+*.log
+*.out
+*.err
+nohup.out
+*.cb
+*.nfs*
+
+# Local secrets and machine-specific config
+config/local/
+
+# Editor and OS metadata
+.vscode/
+.idea/
+.DS_Store
+.mypy_cache/
+.ruff_cache/
